@@ -1,13 +1,5 @@
-<h1>Hello, Django!</h1>
+{% extends 'base.html' %}
 
-<!--
-1、「python manage.py startapp 好きなアプリ名」を該当のプロジェクフォルダー内のトディレクトリで実行する。
-2、config/settings.pyのINSTALLED_APPS内に上記で登録した「好きなアプリ名」を追記
-　→同時に日本語化とTIME_ZONEを指定する。
-3、作成したアプリフォルダー内にtemplatesフォルダーを作成し、実際にWebページに表示されるViewファイルを作成
-4、views.pyを編集 
-5、urls.pyを作成し、編集
-6、config/urls.pyを編集
--->
-
- <p>Welcome!</p>
+{% block main %}
+<h1>ホーム</h1>
+{% endblock %}
