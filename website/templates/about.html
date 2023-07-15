@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block main %}
 <h1>自己紹介</h1>
+<h2>実績</h2>
+<p>{% now 'Y年m月d日 H時i分' %}現在までに{{ num_servies | intcomma }}個のWebアプリケーションサービスを作りました。</p>
+<h2>開発言語スキル</h2>
+<ul>
+    {% for skil in skils %}
+    <li>{{ skil }}</li>
+    {% empty %}
+    <li>スキルはありません</li>
+    {% endfor %}
+</ul>
 {% endblock %}

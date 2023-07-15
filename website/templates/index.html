@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block main %}
 <h1>ホーム</h1>
+{% if username == 'takuto' %}
+<h1>自分です</h1>
+{% elif username %}
+<h1>{{ username }}さん、ようこそ！</h1>
+{% else %}
+<h1>匿名ユーザーさん、ようこそ！</h1>
+{% endif %}
+<img src="{% static 'welcome.jpg' %}" >
 {% endblock %}
